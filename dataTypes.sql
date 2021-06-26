@@ -1,0 +1,1 @@
+select column_name, udt_name, numeric_precision, character_maximum_length from information_schema.columns where table_name = 'heritage_site';

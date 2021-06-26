@@ -1,0 +1,34 @@
+Known issues:
+    1   - Bad performance against huge databases when loading server tree view
+    2   - A schema will not be displayed in server tree view if it has 0 tables & 0 columns
+    3   - When adding a new server, server list isn't updated with the new record
+    4   - Refresh button destroy application visiblity behaviour
+    4   - ClearFields button destroy application visiblity behaviour
+
+TO-DO:
+    1   - Finish tables tab with all functionality
+    2   - Make server tree browsing on demand
+    3   - Clear fields per tab (Function for each tab)
+    4   - Cancel button for each operation
+    5   - Query time globally
+    6   - Separate code into files
+    7   - Revise code cleanness
+    8   - Revise code order
+    9   - Revise code performance
+    10  - Revise code redunduncy
+    11  - Revice code variables
+    12  - Separate messages, credits and queries files
+    13  - Encrypt credentials before save to file
+    14  - Separate window for each function
+    15  - Bug fixing
+
+Planned features:
+    1   - Insert into/create table using file
+    2   - SQL restore/backup using select statements
+    3   - GeoServer PK table creation
+    4   - Import to & Export from table into .txt or .csv
+    5   - Inquiry tool (To generate create statement of objects)
+    6   - Views support
+    7   - Functions support
+    8   - Server configurations support (.hba & .config)
+    9   - PostgreSQL-XL cluster support (Creation, Failover & Configuration)

@@ -1,0 +1,155 @@
+{
+    "server": {
+        "check": "Connection to the server can be established!",
+        "connected": "Server is connected",
+        "disconnected": "Server is disconnected",
+        "status": "Server status:\n",
+        "version": "select version();",
+        "clustered": "Server '{}' is clustered!",
+        "notClustered": "Server '{}' is not clustered!",
+        "loading": "Please wait while loading server info..."
+    },
+    "messages": {
+        "servNameReq": "Please select a server or provide a new one!",
+        "connectWarning": "You are connecting to a server. Do you want to proceed?",
+        "disconnectWarning": "You are disconnecting from a server. Do you want to proceed?",
+        "deleteWarning": "You are about to perform delete action. Do you want to proceed?",
+        "editWarning": "You are about to perform edit action. Do you want to proceed?",
+        "truncateWarning": "You are about to perform truncate action. Do you want to proceed?",
+        "success": "Query ran successfully",
+        "reqFields": "Fields required!",
+        "reqCheck": "Please select at least one option!",
+        "tabIdentifier": "Tables list:\n"
+    },
+    "database": {
+        "required": "Please select a database to connect!",
+        "dbView": "SELECT datname FROM pg_database WHERE datistemplate = false;",
+        "createDBWithOwner": "CREATE DATABASE {0} OWNER =  {1};",
+        "alterDBName": "ALTER DATABASE {0} RENAME TO {1};",
+        "alterDBOwner": "ALTER DATABASE {0} OWNER TO {1};",
+        "alterDB": "ALTER DATABASE {0} RENAME TO {1} OWNER TO {2};",
+        "dropDB": "DROP DATABASE {0};"
+    },
+    "extension": {
+        "exView": "SELECT extname FROM pg_extension;",
+        "createEX": "CREATE EXTENSION {0};",
+        "dropEX": "DROP EXTENSION {0};"
+    },
+    "user": {
+        "createU": "CREATE USER {0} WITH {1} PASSWORD '{2}';",
+        "alterU": "ALTER USER {0} WITH {1};",
+        "alterUWithP": "ALTER USER {0} WITH {1} PASSWORD '{2}';",
+        "dropU": "DROP USER {0};",
+        "T_optionsU": [
+            "LOGIN",
+            "SUPERUSER ",
+            "CREATEROLE",
+            "CREATEDB ",
+            "INHERIT",
+            "REPLICATION"
+        ],
+        "F_optionsU": [
+            "NOLOGIN",
+            "NOSUPERUSER",
+            "NOCREATEROLE",
+            "NOCREATEDB",
+            "NOINHERIT",
+            "NOREPLICATION"
+        ],
+        "grantU": "GRANT ALL PRIVILEGES ON DATABASE {0} TO {1};",
+        "reassign": "REASSIGN OWNED BY {0} TO postgres;",
+        "dropUserObject": "DROP OWNED BY {0};",
+        "userView": "SELECT rolname FROM pg_roles;"
+    },
+    "schema": {
+        "schView": "SELECT n.nspname FROM pg_catalog.pg_namespace n WHERE n.nspname !~ '^pg_' AND n.nspname <> 'information_schema' ORDER BY 1;",
+        "createSchema": "CREATE SCHEMA IF NOT EXISTS {0};",
+        "createSchWithOwner": "CREATE SCHEMA IF NOT EXISTS {0} AUTHORIZATION {1};",
+        "alterSchemaName": "ALTER SCHEMA {0} RENAME TO {1};",
+        "alterSchemaOwner": "ALTER SCHEMA {0} OWNER TO {1};",
+        "alterSchema": "ALTER SCHEMA {0} RENAME TO {1} OWNER TO {2};",
+        "dropSchema": "DROP SCHEMA {0} RESTRICT;",
+        "dropCasSchema": "DROP SCHEMA {0} CASCADE;",
+        "addSerachPath": "SET search_path TO {0}, public;",
+        "grantCreate": "GRANT CREATE ON SCHEMA {0} TO {1};",
+        "grantUsage": "GRANT USAGE ON SCHEMA {0} TO {1};",
+        "grantAll": "GRANT USAGE, CREATE ON SCHEMA {0} TO {1};"
+    },
+    "sequences": {
+        "UID": "SELECT oid FROM pg_catalog.pg_namespace where nspname = '{0}';",
+        "seqView": "SELECT sequence_name FROM information_schema.sequences WHERE sequence_schema = '{0}';",
+        "loadSequence": "SELECT a.last_value, b.minimum_value, maximum_value, increment FROM {0}.{1} a, information_schema.sequences b WHERE sequence_schema = '{0}' and sequence_name = '{1}'",
+        "createSequence": "CREATE SEQUENCE {0}.{1} INCREMENT {2} {3} {4} START {5} {6}",
+        "dropSequence": "DROP SEQUENCE {0}.{1} CASCADE",
+        "alterSequence": "ALTER SEQUENCE IF EXISTS {0}.{1} INCREMENT {2} {3} {4} RESTART {5} {6};{7} {8}",
+        "reqName": "Sequence name is required!",
+        "reqOwner": "Please provide both owner table & column OR leave them blank!",
+        "seqIneger": "Only integer values allowed!"
+    },
+    "tables": {
+        "tabView": "SELECT table_name FROM information_schema.tables WHERE table_schema = '{0}'",
+        "columnsView": "SELECT COLUMN_NAME FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = '{0}' AND TABLE_NAME = '{1}';",
+        "copyTable": "CREATE TABLE {0}.{1} (LIKE {2}.{3} INCLUDING ALL);INSERT INTO {0}.{1} select * from {2}.{3};"
+    },
+    "extras": {
+        "about": "PostAgent tool\nPgAdmin alternative\nCreated from scratch by: ca5p3r\nVersion: 1.0\nThanks to PgAdmin team for inspiration\n\nThis tool is maintained by me -ca5p3r-, expect more features to be supported!",
+        "author": "Author: ca5p3r\nAKA: Mohammed A. Abounawara\nProfession: GIS Engineer\nHobbies: Coding & Reading\nPhone: +20-1551945621\nMail: m.ahmed@penta-b.com\n         ca5p3r1@icloud.com\n\nMore: I like automating stuff and creating cool tools(scripts)!",
+        "credits": "This is a list of sites I used to create this tool:\n\nhttps://www.postgresql.org/docs/12/index.html\n]nhttps://www.tutorialspoint.com/postgresql/index.htm\n\nhttps://www.w3schools.com/sql/default.asp\n\nhttps://www.w3resource.com/PostgreSQL/tutorial.php\n\nhttp://www.postgresqltutorial.com/\n\nhttps://www.guru99.com/postgresql-tutorial.html\n\nAlso, special thanks to 'PostgreSQL-pgAdmin' team for inspiration!"
+    },
+    "combobox": {
+        "dataTypes": [
+            "Choose value",
+            "bigint",
+            "bigserial",
+            "bit",
+            "varbit",
+            "bool",
+            "box",
+            "bytea",
+            "char",
+            "varchar",
+            "cidr",
+            "circle",
+            "date",
+            "float8",
+            "inet",
+            "integer",
+            "interval",
+            "json",
+            "jsonb",
+            "line",
+            "lseg",
+            "macaddr",
+            "money",
+            "numeric",
+            "path",
+            "pg_lsn",
+            "point",
+            "polygon",
+            "float4",
+            "int2",
+            "serial2",
+            "serial4",
+            "text",
+            "time/W/Timezone",
+            "time/WO/Timezone",
+            "timestamp/WO/Timezone",
+            "timestamp/W/Timezone",
+            "tsquery",
+            "tsvector",
+            "txid_snapshot",
+            "uuid",
+            "xml"
+        ],
+        "logic": [
+            "Choose value",
+            "Yes",
+            "No"
+        ]
+    },
+    "special": {
+        "schema": "select nspname as table_schema from pg_catalog.pg_namespace where nspname not in ('information_schema', 'pg_catalog') and nspname not like 'pg_toast%' and nspname not like 'pg_temp_%' order by table_schema;",
+        "table": "SELECT table_name FROM information_schema.tables WHERE table_schema = '{0}' and table_name not in ('geography_columns', 'geometry_columns', 'spatial_ref_sys');",
+        "column": "SELECT column_name FROM information_schema.columns WHERE table_schema = '{0}' and table_name = '{1}';"
+    }
+}
